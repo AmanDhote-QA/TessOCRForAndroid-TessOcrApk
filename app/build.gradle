@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace "com.example.tesseractocr"
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.example.tesseractocr"
+        minSdk 23
+        targetSdk 34
+    }
+    buildTypes {
+        debug   { debuggable true }
+        release { debuggable true }
+    }
+    aaptOptions {
+        noCompress "traineddata"
+    }
+}
+
+dependencies {
+    implementation 'com.rmtheis:tess-two:9.1.0'
+    implementation libs.ext.junit
+}
